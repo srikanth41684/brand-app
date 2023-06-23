@@ -5,7 +5,7 @@ import SearchInput from "./SearchInput";
 const Navbar = () => {
   return (
     <div>
-      <div>
+      <div className="flex items-center">
         <div className="flex items-center">
           <Image src={logo} width={50} height={50} alt="logo" />
           <div className="text-3xl text-sky-300 font-bold pl-2">Barand</div>

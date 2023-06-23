@@ -17,10 +17,8 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        {session === null ? (
-          <NextAuthProvider>
-            {children}
-          </NextAuthProvider>
+        {!session ? (
+          <NextAuthProvider>{children}</NextAuthProvider>
         ) : (
           <NextAuthProvider>
             <Navbar />

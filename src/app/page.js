@@ -4,11 +4,11 @@ import { redirect } from "next/navigation";
 import LogOutButton from "../../components/LogOutButton";
 
 const HomeScreen = async () => {
-  // const session = await getServerSession(authOptions);
+  const session = await getServerSession(authOptions);
 
-  // if (!session) {
-  //   return redirect("/login");
-  // }
+  if (!session) {
+    return redirect("/login");
+  }
   return (
     <div>
       <h1 className="text-indigo-300 mt-9">HomeScreen</h1>

@@ -1,3 +1,4 @@
+import Navbar from "../../components/navbarcomponents/Navbar";
 import { NextAuthProvider } from "../../contexts/Provider";
 import "./globals.css";
 import { Roboto } from "next/font/google";
@@ -13,7 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <NextAuthProvider>{children}</NextAuthProvider>
+        <NextAuthProvider>
+          <Navbar />
+          {children}
+        </NextAuthProvider>
       </body>
     </html>
   );

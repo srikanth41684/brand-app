@@ -30,12 +30,12 @@ const navList = [
 const Navbar = () => {
   return (
     <div className="">
-      <div className="flex items-center justify-between px-12 max-w-[1680px] m-auto">
-        <div className="flex items-center">
+      <div className="flex items-center py-4 justify-between px-12 max-w-[1680px] m-auto">
+        <Link href="/" className="flex items-center">
           <Image src={logo} width={50} height={50} alt="logo" />
           <div className="text-3xl text-sky-300 font-bold pl-2">Barand</div>
-        </div>
-        <div>
+        </Link>
+        <div className="w-1/2">
           <SearchInput />
         </div>
         <div className="flex gap-4">
@@ -43,15 +43,16 @@ const Navbar = () => {
             return (
               <Link
                 href={item.href}
-                className="flex flex-col px-1 items-center"
+                className="flex flex-col px-1 items-center gap-1"
               >
                 <Image src={item.src} width={23} height={23} alt="logo" />
-                <div>{item.title}</div>
+                <div className="text-sm">{item.title}</div>
               </Link>
             );
           })}
         </div>
       </div>
+      <hr />
     </div>
   );
 };

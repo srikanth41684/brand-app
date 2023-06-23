@@ -1,14 +1,14 @@
 const SearchInput = () => {
   return (
-    <div className="flex items-center border-2 border-blue-500 rounded">
-      <div>
+    <div className="flex w-full items-center border-2 border-blue-500 rounded">
+      <div className="w-[67%]">
         <input
-          className="py-1 focus:outline-none pl-1 border-r-2 border-r-blue-300"
+          className="py-1 w-full focus:outline-none pl-1 border-r-2 border-r-blue-300"
           placeholder="Search"
         />
       </div>
-      <div className="">
-        <select className="px-3 py-1 outline-none">
+      <div className="w-[20%]">
+        <select className="px-3 w-full py-1 outline-none">
           <option>All category</option>
           <option>All category1</option>
           <option>All category2</option>
@@ -17,7 +17,11 @@ const SearchInput = () => {
           <option>All category5</option>
         </select>
       </div>
-      <button className="bg-blue-500 px-6 py-1 text-white">Search</button>
+      <div className="w-[13%]">
+        <button className="bg-blue-500 w-full px-6 py-1 text-white">
+          Search
+        </button>
+      </div>
     </div>
   );
 };

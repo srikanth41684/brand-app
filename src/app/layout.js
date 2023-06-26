@@ -22,7 +22,7 @@ export default async function RootLayout({ children }) {
         ) : (
           <NextAuthProvider>
             <Navbar />
-            {children}
+            <main className="pt-[130px]">{children}</main>
           </NextAuthProvider>
         )}
       </body>

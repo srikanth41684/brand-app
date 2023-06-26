@@ -27,9 +27,9 @@ const HeroBanner = () => {
   //   setTimeout(() => {});
   // });
   return (
-    <div className="relative flex">
-      <Image src={heroImage.src} alt="banner" />
-      <div className="absolute top-12 left-20">
+    <div className="relative flex h-auto">
+      <Image className="rounded-md" src={heroImage.src} alt="banner" />
+      <div className="absolute top-16 left-20">
         <div>
           <div></div>
           <div>

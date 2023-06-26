@@ -11,8 +11,8 @@ const HomeScreen = async () => {
     return redirect("/login");
   }
   return (
-    <div>
-      <div className="px-12 max-w-[1400px] m-auto">
+    <div className="bg-slate-50">
+      <div className="flex flex-col pt-5 gap-4 px-12 max-w-[1400px] m-auto">
         <HeroSection />
       </div>
     </div>

@@ -53,6 +53,48 @@ const Navbar = () => {
         </div>
       </div>
       <hr />
+      <div className="px-12 max-w-[1400px] m-auto flex justify-between items-center py-3">
+        <div className="flex items-center gap-2">
+          <div>
+            <select className="px-3 py-1 outline-none">
+              <option>All Categories</option>
+              <option>All category1</option>
+              <option>All category2</option>
+              <option>All category3</option>
+              <option>All category4</option>
+              <option>All category5</option>
+            </select>
+          </div>
+          <div>
+            <select className="px-3 py-1 outline-none">
+              <option>Pages</option>
+              <option>Page1</option>
+              <option>Page2</option>
+              <option>Page3</option>
+            </select>
+          </div>
+          <div className="flex gap-3">
+            <Link href="/">About</Link>
+            <Link href="/">Services</Link>
+            <Link href="/">Projects</Link>
+          </div>
+        </div>
+        <div className="flex">
+          <select className="px-3 py-1 outline-none">
+            <option>USD</option>
+            <option>USD1</option>
+            <option>USD2</option>
+            <option>USD3</option>
+          </select>
+          <select className="px-3 py-1 outline-none">
+            <option>English</option>
+            <option>English1</option>
+            <option>English2</option>
+            <option>English3</option>
+          </select>
+        </div>
+      </div>
+      <hr />
     </div>
   );
 };

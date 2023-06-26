@@ -5,6 +5,7 @@ import LogOutButton from "../../components/LogOutButton";
 import HeroSection from "../../components/homeHeroSection/Hero";
 import Link from "next/link";
 import Image from "next/image";
+import { getLimitedData } from "../../utils";
 
 const categoryImages = [
   {
@@ -42,6 +43,8 @@ const categoryImages = [
 const HomeScreen = async () => {
   const session = await getServerSession(authOptions);
 
+  const products = await getLimitedData(10, 35);
+
   if (!session) {
     return redirect("/login");
   }
@@ -72,8 +75,33 @@ const HomeScreen = async () => {
           </div>
         </div>
         <div>
-          
+          <div className="text-3xl font-semibold pb-4">New products</div>
+          <div className="flex flex-wrap">
+            {products?.products?.map((item, index) => {
+              return (
+                <div className="w-[20%] pr-5 pb-5">
+                  <Link href={`category/${item.category}/${item.id}`}>
+                    <div className="bg-white shadow hover:shadow-lg h-[341px] p-3 rounded">
+                      <div className="w-90% h-56 relative">
+                        <Image
+                          src={item.thumbnail}
+                          layout="fill"
+                          objectFit="contain"
+                          alt="nex products"
+                        />
+                      </div>
+                      <div className="pt-5">
+                        <div>${item.price}</div>
+                        <div className="capitalize pt-1">{item.title}</div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
         </div>
+
         <HeroSection />
       </div>
     </div>

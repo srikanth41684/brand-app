@@ -4,3 +4,10 @@ export async function getCategoryData(categiry) {
   );
   return response.json();
 }
+
+export async function getLimitedData(limit, skip) {
+  const response = await fetch(
+    `https://dummyjson.com/products?limit=${limit}&skip=${skip}`
+  );
+  return response.json();
+}

@@ -30,7 +30,7 @@ const navList = [
 const Navbar = () => {
   return (
     <div className="fixed w-full bg-white z-10">
-      <div className="flex items-center h-[80px] justify-between px-12 max-w-[1400px] m-auto">
+      <div className="flex items-center h-[80px] justify-between px-5 max-w-[1400px] m-auto">
         <Link href="/" className="flex items-center">
           <Image src={logo} width={50} height={50} alt="logo" />
           <div className="text-2xl text-blue-600 font-bold pl-2">Barand</div>
@@ -53,7 +53,7 @@ const Navbar = () => {
         </div>
       </div>
       <hr />
-      <div className="px-12 max-w-[1400px] m-auto flex justify-between items-center h-[50px]">
+      <div className="px-5 max-w-[1400px] m-auto flex justify-between items-center h-[50px]">
         <div className="flex items-center gap-2">
           <div>
             <select className="px-3 py-1 outline-none">

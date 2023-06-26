@@ -30,12 +30,12 @@ const navList = [
 const Navbar = () => {
   return (
     <div className="">
-      <div className="flex items-center py-4 justify-between px-12 max-w-[1680px] m-auto">
+      <div className="flex items-center py-4 justify-between px-12 max-w-[1400px] m-auto">
         <Link href="/" className="flex items-center">
           <Image src={logo} width={50} height={50} alt="logo" />
-          <div className="text-3xl text-sky-300 font-bold pl-2">Barand</div>
+          <div className="text-2xl text-blue-600 font-bold pl-2">Barand</div>
         </Link>
-        <div className="w-1/2">
+        <div className="w-2/4">
           <SearchInput />
         </div>
         <div className="flex gap-4">

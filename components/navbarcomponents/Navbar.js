@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className="flex items-center h-[80px] justify-between px-5 max-w-[1400px] m-auto">
         <Link href="/" className="flex items-center">
           <Image src={logo} width={50} height={50} alt="logo" />
-          <div className="text-2xl text-blue-600 font-bold pl-2">Barand</div>
+          <div className="text-2xl text-blue-600 font-bold pl-2">Brand</div>
         </Link>
         <div className="w-2/4">
           <SearchInput />

@@ -45,6 +45,7 @@ const CategoryDetails = async ({ params }) => {
                         height={0}
                         sizes="100vw"
                         className="w-[200px] h-[200px] object-cover rounded"
+                        alt="product"
                       />
                     </div>
                     <div>

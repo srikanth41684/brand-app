@@ -19,7 +19,13 @@ const CategoryProductsNav = () => {
       <div className="flex flex-col pl-5 pt-3">
         {categories.map((item, index) => {
           return (
-            <Link href={`/category/${item}`} className="capitalize p-2 hover:bg-blue-500 hover:text-white rounded">{item.replace("-", " ")}</Link>
+            <Link
+              key={index}
+              href={`/category/${item}`}
+              className="capitalize p-2 hover:bg-blue-500 hover:text-white rounded"
+            >
+              {item.replace("-", " ")}
+            </Link>
           );
         })}
       </div>

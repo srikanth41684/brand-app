@@ -28,7 +28,7 @@ const CategeryProductsLayout = ({ children, params }) => {
       <div className="bg-white">
         <div className="px-5 max-w-[1400px] m-auto">
           <div className="flex">
-            <div className="w-[25%]">
+            <div className="w-[25%] mt-10">
               <CategoryProductsNav />
             </div>
             <div className="w-[75%]">{children}</div>

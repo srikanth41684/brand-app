@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="w-2/4">
           <SearchInput />
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
           {navList.map((item, index) => {
             return (
               <Link

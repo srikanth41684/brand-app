@@ -6,7 +6,7 @@ const LogOutButton = () => {
     <div>
       <button
         onClick={() => signOut()}
-        className="bg-lime-500 font-bold text-xl text-yellow-50 rounded px-8 py-3"
+        className="bg-lime-500 font-bold text-xl text-yellow-50 rounded px-8 py-2"
       >
         Log Out
       </button>

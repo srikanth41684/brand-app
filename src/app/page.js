@@ -106,7 +106,6 @@ const HomeScreen = async () => {
           </div>
         </div>
       </div>
-      <LogOutButton />
       <div className="mt-5">
         <Subscribe />
       </div>

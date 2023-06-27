@@ -11,23 +11,33 @@ const CategoryDetails = async ({ params }) => {
         <div className="flex flex-col pt-12">
           {category?.products?.map((item, index) => {
             return (
-              <div key={index} className="w-[20%] pr-5 pb-5">
+              <div key={index}>
                 <Link href={`${item.category}/${item.id}`}>
-                  <div className="bg-white shadow hover:shadow-lg h-[341px] p-3 rounded">
-                    <div className="w-90% h-56 relative">
+                  <div className="flex gap-5">
+                    <div>
                       <Image
                         src={item.thumbnail}
-                        layout="fill"
-                        objectFit="contain"
-                        alt="nex products"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        className="w-[200px] h-[200px] object-cover rounded"
                       />
                     </div>
-                    <div className="pt-5">
+                    <div>
+                      <div>{item.title}</div>
+                      <div>
+                        <div>{item.rating}</div>
+                        <div>{item.stock} Stock</div>
+                        <div>Free shipping</div>
+                      </div>
                       <div>${item.price}</div>
-                      <div className="capitalize pt-1">{item.title}</div>
+                      <div>{item.description}</div>
                     </div>
                   </div>
                 </Link>
+                <div className="py-7">
+                  <hr />
+                </div>
               </div>
             );
           })}

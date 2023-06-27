@@ -103,7 +103,9 @@ const HomeScreen = async () => {
           </div>
         </div>
       </div>
-      <Subscribe />
+      <div className="mt-5">
+        <Subscribe />
+      </div>
     </div>
   );
 };

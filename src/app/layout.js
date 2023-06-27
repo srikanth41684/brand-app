@@ -4,6 +4,7 @@ import "./globals.css";
 import { Roboto } from "next/font/google";
 import { authOptions } from "./api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth/next";
+import Footer from "../../components/footer/Footer";
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"], display: "swap" });
 
@@ -23,6 +24,7 @@ export default async function RootLayout({ children }) {
           <NextAuthProvider>
             <Navbar />
             <main className="pt-[130px]">{children}</main>
+            <Footer />
           </NextAuthProvider>
         )}
       </body>

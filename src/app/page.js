@@ -6,6 +6,7 @@ import HeroSection from "../../components/homeHeroSection/Hero";
 import Link from "next/link";
 import Image from "next/image";
 import { getLimitedData } from "../../utils";
+import Subscribe from "../../components/Subscribe";
 
 const categoryImages = [
   {
@@ -101,9 +102,8 @@ const HomeScreen = async () => {
             })}
           </div>
         </div>
-
-        <HeroSection />
       </div>
+      <Subscribe />
     </div>
   );
 };

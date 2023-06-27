@@ -2,13 +2,37 @@ import React from "react";
 import { getCategoryData } from "../../../../utils";
 import Link from "next/link";
 import Image from "next/image";
+import CategoryProductsNav from "../../../../components/CategoryProductsNav";
 
 const CategoryDetails = async ({ params }) => {
   const category = await getCategoryData(params.cateName);
   return (
     <div className="h-[100%]">
-      <div className="px-5 max-w-[1400px] m-auto">
-        <div className="flex flex-col pt-12">
+      <div className="bg-slate-50">
+        <div className="px-5 max-w-[1400px] m-auto">
+          <div className="text-gray-400 py-12">
+            <Link href="/" className="hover:underline">
+              Home
+            </Link>{" "}
+            -{" "}
+            <Link href="/category" className="hover:underline">
+              Category
+            </Link>{" "}
+            -{" "}
+            <Link
+              href={`category/${params.cateName}`}
+              className="capitalize hover:underline"
+            >
+              {params.cateName}
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className="flex gap-5 px-5 max-w-[1400px] m-auto">
+        <div className="w-[25%] mt-10">
+          <CategoryProductsNav />
+        </div>
+        <div className="flex flex-col pt-12 w-[75%]">
           {category?.products?.map((item, index) => {
             return (
               <div key={index}>

@@ -11,6 +11,16 @@ const categories = [
   "tops",
   "womens-dresses",
   "womens-shoes",
+  "mens-shirts",
+  "mens-shoes",
+  "mens-watches",
+  "womens-watches",
+  "womens-bags",
+  "womens-jewellery",
+  "sunglasses",
+  "automotive",
+  "motorcycle",
+  "lighting",
 ];
 const CategoryProductsNav = () => {
   return (

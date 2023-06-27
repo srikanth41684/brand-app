@@ -20,7 +20,7 @@ const ProductDetailsCard = ({ product }) => {
   };
 
   return (
-    <div className="bg-white p-5">
+    <div className="bg-white p-5 shadow rounded">
       <div className="flex gap-5">
         <div className="w-[35%]">
           <div>
@@ -29,7 +29,7 @@ const ProductDetailsCard = ({ product }) => {
               width={0}
               height={0}
               sizes="100vw"
-              className="w-full h-[500px] object-cover"
+              className="w-full h-[500px] object-cover rounded"
               alt="product"
             />
           </div>
@@ -43,7 +43,7 @@ const ProductDetailsCard = ({ product }) => {
                     height={0}
                     sizes="100vw"
                     alt="product"
-                    className="w-[70px] h-[70px]"
+                    className="w-[70px] h-[70px] rounded"
                   />
                 </button>
               );

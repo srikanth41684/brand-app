@@ -78,8 +78,8 @@ const Navbar = () => {
             </select>
           </div>
           <div className="flex gap-3">
+            <Link href="/products">Products</Link>
             <Link href="/">About</Link>
-            <Link href="/">Services</Link>
             <Link href="/">Projects</Link>
           </div>
         </div>

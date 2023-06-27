@@ -28,7 +28,7 @@ const HeroBanner = () => {
   // });
   return (
     <div className="relative flex h-auto">
-      <Image className="rounded-md" src={heroImage.src} alt="banner" />
+      <Image className="rounded-md" src={heroImage.src} width={0} height={0} sizes="100vw" alt="banner" />
       <div className="absolute top-16 left-20">
         <div>
           <div></div>

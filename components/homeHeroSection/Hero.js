@@ -27,7 +27,7 @@ const HeroSection = () => {
               key={index}
               href={`category/${item}`}
             >
-              {item.replace("-", " ")}
+              {item.replace(`-`, ` `)}
             </Link>
           );
         })}
@@ -48,7 +48,7 @@ const HeroSection = () => {
             </div>
             <div className="pl-3">
               <div>Hi User</div>
-              <div>Let's get stated</div>
+              <div>Let&apos;s get stated</div>
             </div>
           </div>
           <div>

@@ -4,11 +4,11 @@ import SearchInput from "./SearchInput";
 import Link from "next/link";
 import wishImage from "/public/wishlist-icon.png";
 import cartImage from "/public/cart-icon.png";
-import profileImage from "/public/profile-icon.png";
+import UserDetails from "./UserDetails";
 
 const navList = [
   {
-    id: 1,
+    id: 0,
     title: "Wish List",
     src: wishImage,
     href: "/wishlist",
@@ -18,12 +18,6 @@ const navList = [
     title: "My Cart",
     src: cartImage,
     href: "/cart",
-  },
-  {
-    id: 1,
-    title: "Profile",
-    src: profileImage,
-    href: "/profile",
   },
 ];
 
@@ -43,13 +37,23 @@ const Navbar = () => {
             return (
               <Link
                 href={item.href}
+                key={index}
                 className="flex flex-col px-1 items-center gap-1"
               >
-                <Image src={item.src} width={23} height={23} alt="logo" />
+                <Image
+                  src={item.src}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  alt="details"
+                />
                 <div className="text-sm">{item.title}</div>
               </Link>
             );
           })}
+          <div>
+            <UserDetails />
+          </div>
         </div>
       </div>
       <hr />

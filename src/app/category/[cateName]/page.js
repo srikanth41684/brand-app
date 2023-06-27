@@ -27,7 +27,7 @@ const CategoryDetails = async ({ params }) => {
         <div className="flex pt-12">
           {category?.products?.map((item, index) => {
             return (
-              <div className="w-[20%] pr-5 pb-5">
+              <div key={index} className="w-[20%] pr-5 pb-5">
                 <Link href={`category/${item.category}/${item.id}`}>
                   <div className="bg-white shadow hover:shadow-lg h-[341px] p-3 rounded">
                     <div className="w-90% h-56 relative">

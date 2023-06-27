@@ -59,6 +59,7 @@ const HomeScreen = async () => {
             {categoryImages.map((item, index) => {
               return (
                 <Link
+                  key={index}
                   href={`category/${item.title}`}
                   className="flex flex-col items-center gap-4"
                 >
@@ -80,14 +81,16 @@ const HomeScreen = async () => {
           <div className="flex flex-wrap">
             {products?.products?.map((item, index) => {
               return (
-                <div className="w-[20%] pr-5 pb-5">
+                <div key={index} className="w-[20%] pr-5 pb-5">
                   <Link href={`category/${item.category}/${item.id}`}>
                     <div className="bg-white shadow hover:shadow-lg h-[341px] p-3 rounded">
                       <div className="w-90% h-56 relative">
                         <Image
                           src={item.thumbnail}
-                          layout="fill"
-                          objectFit="contain"
+                          width={0}
+                          height={0}
+                          sizes="100vw"
+                          className="w-[100%] h-[230px]"
                           alt="nex products"
                         />
                       </div>
@@ -103,6 +106,7 @@ const HomeScreen = async () => {
           </div>
         </div>
       </div>
+      <LogOutButton />
       <div className="mt-5">
         <Subscribe />
       </div>

@@ -20,23 +20,47 @@ const ProductDetailsCard = ({ product }) => {
   };
 
   return (
-    <div>
-      <div>
-        <div>
-          {product?.images?.map((item, index) => {
-            return (
-              <button key={index} onClick={() => imagesetHandler(item)}>
-                <Image src={item} width={100} height={100} alt="product" />
-              </button>
-            );
-          })}
+    <div className="bg-white p-5">
+      <div className="flex gap-5">
+        <div className="w-[35%]">
+          <div>
+            <Image
+              src={commObj.imgUrl}
+              width={0}
+              height={0}
+              sizes="100vw"
+              className="w-full h-[500px] object-cover"
+              alt="product"
+            />
+          </div>
+          <div className="flex gap-3 pt-5 justify-center">
+            {product?.images?.map((item, index) => {
+              return (
+                <button key={index} onClick={() => imagesetHandler(item)}>
+                  <Image
+                    src={item}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
+                    alt="product"
+                    className="w-[70px] h-[70px]"
+                  />
+                </button>
+              );
+            })}
+          </div>
         </div>
-        <div>
-          <Image src={commObj.imgUrl} width={500} height={700} alt="product" />
-        </div>
-        <div>
-          <div>{product.title}</div>
-          <div>{product.price}</div>
+        <div className="w-[65%]">
+          <div>
+            <div>{product.title}</div>
+            <div>
+              <div>{product.rating}</div>
+              <div>{product.stock} Stock</div>
+              <div>Free shipping</div>
+            </div>
+            <div>${product.price}</div>
+            <div>{product.description}</div>
+          </div>
           <div>
             <button onClick={() => cartHandler(product)}>Add to Cart</button>
           </div>

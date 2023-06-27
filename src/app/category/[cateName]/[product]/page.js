@@ -7,7 +7,7 @@ const ProductDetails = async ({ params }) => {
   const product = await getProductData(params.product);
   return (
     <div className="bg-slate-50">
-      <div className="px-5 max-w-[1400px] m-auto">
+      <div className="px-5 max-w-[1400px] m-auto pb-10">
         <div className="text-gray-400 py-12">
           <Link href="/" className="hover:underline">
             Home

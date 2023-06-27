@@ -16,3 +16,10 @@ export async function getProductData(id) {
   const response = await fetch(`https://dummyjson.com/products/${id}`);
   return response.json();
 }
+
+export async function getSearchProduct(phone) {
+  const response = await fetch(
+    `https://dummyjson.com/products/search?q=${phone}`
+  );
+  return response.json();
+}

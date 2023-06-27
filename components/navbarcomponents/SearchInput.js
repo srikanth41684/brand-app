@@ -1,4 +1,4 @@
-const SearchInput = () => {
+const SearchInput = async () => {
   return (
     <div className="flex w-full items-center border-2 border-blue-500 rounded">
       <div className="w-[67%]">

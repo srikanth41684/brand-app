@@ -44,13 +44,15 @@ const UserDetails = () => {
           onClick={profileHandler}
           className="flex flex-col px-1 items-center gap-1 cursor-pointer"
         >
-          <Image
-            className="rounded-full"
-            src={user.image}
-            width={23}
-            height={23}
-            alt="logo"
-          />
+          {user.image && (
+            <Image
+              className="rounded-full"
+              src={user.image}
+              width={23}
+              height={23}
+              alt="logo"
+            />
+          )}
           <div className="text-sm">{user.name}</div>
         </div>
       )}

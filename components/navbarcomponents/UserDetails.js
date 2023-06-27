@@ -27,8 +27,6 @@ const UserDetails = () => {
     }
   }, [session]);
 
-  console.log("user======>", user);
-
   const profileHandler = () => {
     setProfile(!profile);
   };

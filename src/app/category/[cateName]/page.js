@@ -6,25 +6,9 @@ import Image from "next/image";
 const CategoryDetails = async ({ params }) => {
   const category = await getCategoryData(params.cateName);
   return (
-    <div className="bg-slate-50 h-[100%]">
+    <div className="h-[100%]">
       <div className="px-5 max-w-[1400px] m-auto">
-        <div className="pt-6 text-gray-400">
-          <Link href="/" className="hover:underline">
-            Home
-          </Link>{" "}
-          -{" "}
-          <Link href="/category" className="hover:underline">
-            Category
-          </Link>{" "}
-          -{" "}
-          <Link
-            href={`category/${params.cateName}`}
-            className="capitalize hover:underline"
-          >
-            {params.cateName}
-          </Link>
-        </div>
-        <div className="flex pt-12">
+        <div className="flex flex-col pt-12">
           {category?.products?.map((item, index) => {
             return (
               <div key={index} className="w-[20%] pr-5 pb-5">
